@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PowerfulSpace.Facts.Web.Data;
 using Serilog;
 using Serilog.Events;
 using System;
@@ -13,7 +15,7 @@ namespace PowerfulSpace.Facts.Web
 {
     public class Program
     {
-        public static int Main(string[] args)
+        public static async Task<int> Main(string[] args)
         {
 
             Log.Logger = new LoggerConfiguration()
@@ -25,7 +27,16 @@ namespace PowerfulSpace.Facts.Web
             try
             {
                 Log.Information("Starting web host");
-                CreateHostBuilder(args).Build().Run();
+
+                var host = CreateHostBuilder(args).Build();
+
+                using (var scope = host.Services.CreateScope())
+                {
+                    await DataInitializer.InitializerAsync(scope.ServiceProvider);
+                }
+
+                host.Run();      
+                
                 return 0;
             }
             catch (Exception ex)

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Calabonga.Microservices.Core/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Calabonga.Microservices.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Calabonga.Microservices.Core.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -2038,6 +2047,21 @@
     }
   },
   "libraries": {
+    "Calabonga.Microservices.Core/4.0.0": {
+      "sha512": "2f7/2IgQoKnVa/KNkzoAFdKb10SCnL3w/TFIkS2qjo+Zwo+7H8Xh3p0w76cc/QdjHvVmeIgyez9rIJknnjMosg==",
+      "type": "package",
+      "path": "calabonga.microservices.core/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "calabonga.microservices.core.4.0.0.nupkg.sha512",
+        "calabonga.microservices.core.nuspec",
+        "lib/net5.0/Calabonga.Microservices.Core.dll",
+        "lib/net6.0/Calabonga.Microservices.Core.dll",
+        "lib/netcoreapp3.1/Calabonga.Microservices.Core.dll",
+        "logo.png"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -7114,6 +7138,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Calabonga.Microservices.Core >= 4.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.11",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.11",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.11",
@@ -7169,6 +7194,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Calabonga.Microservices.Core": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.11, )"
