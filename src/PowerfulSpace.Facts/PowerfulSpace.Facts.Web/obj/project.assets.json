@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Calabonga.EntityFrameworkCore.Entities.Base/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Calabonga.EntityFrameworkCore.Entities.Base.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Calabonga.EntityFrameworkCore.Entities.Base.dll": {}
+        }
+      },
       "Calabonga.Microservices.Core/4.0.0": {
         "type": "package",
         "compile": {
@@ -2047,6 +2056,21 @@
     }
   },
   "libraries": {
+    "Calabonga.EntityFrameworkCore.Entities.Base/3.0.1": {
+      "sha512": "lzGGtvQmvt3AaiRTisNkLRoQT8bdtyJ25NFU+PmGDSSVDM1i5WDhd0L4NNuGlp4dLw+KGI4cM5MbkjARhSwNFA==",
+      "type": "package",
+      "path": "calabonga.entityframeworkcore.entities.base/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "calabonga.entityframeworkcore.entities.base.3.0.1.nupkg.sha512",
+        "calabonga.entityframeworkcore.entities.base.nuspec",
+        "lib/net5.0/Calabonga.EntityFrameworkCore.Entities.Base.dll",
+        "lib/netcoreapp3.1/Calabonga.EntityFrameworkCore.Entities.Base.dll",
+        "lib/netstandard2.1/Calabonga.EntityFrameworkCore.Entities.Base.dll",
+        "logo.png"
+      ]
+    },
     "Calabonga.Microservices.Core/4.0.0": {
       "sha512": "2f7/2IgQoKnVa/KNkzoAFdKb10SCnL3w/TFIkS2qjo+Zwo+7H8Xh3p0w76cc/QdjHvVmeIgyez9rIJknnjMosg==",
       "type": "package",
@@ -7138,6 +7162,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Calabonga.EntityFrameworkCore.Entities.Base >= 3.0.1",
       "Calabonga.Microservices.Core >= 4.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.11",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.11",
@@ -7194,6 +7219,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Calabonga.EntityFrameworkCore.Entities.Base": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
           "Calabonga.Microservices.Core": {
             "target": "Package",
             "version": "[4.0.0, )"

@@ -86,7 +86,15 @@ namespace PowerfulSpace.Facts.Web.Data
             }
 
             var userManager = scope.ServiceProvider.GetService<UserManager<IdentityUser>>();
-            await userManager!.AddToRolesAsync(user, roles);
+            foreach (var role in roles)
+            {
+                var identityResultRole = await userManager!.AddToRolesAsync(user, roles);
+                if (!identityResultRole.Succeeded)
+                {
+                    var message = string.Join(", ", identityResult.Errors.Select(x => $"{x.Code}: {x.Description}"));
+                    throw new MicroserviceDatabaseException(message);
+                }
+            }
 
             await context.SaveChangesAsync();
 

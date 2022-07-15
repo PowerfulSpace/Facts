@@ -12,5 +12,13 @@ namespace PowerfulSpace.Facts.Web.Data
             : base(options)
         {
         }
+
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfigurationsFromAssembly(typeof(Startup).Assembly);
+            base.OnModelCreating(builder);
+        }
+
     }
 }
