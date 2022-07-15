@@ -42,7 +42,7 @@ namespace PowerfulSpace.Facts.Web.Data
 
             foreach (var role in roles)
             {
-                if (context.Roles.Any(x => x.Name == role))
+                if (!context.Roles.Any(x => x.Name == role))
                 {
                     await roleStore.CreateAsync(new IdentityRole(role)
                     {
@@ -55,6 +55,7 @@ namespace PowerfulSpace.Facts.Web.Data
 
             const string username = "powerful@space.com";
 
+            //проверяем наличие пользователя в бд
             if (context.Users.Any(x => x.Email == username))
             {
                 return;
@@ -78,11 +79,17 @@ namespace PowerfulSpace.Facts.Web.Data
             var userStore = new UserStore<IdentityUser>(context);
             var identityResult = await userStore.CreateAsync(user);
 
-            if (identityResult.Succeeded)
+            if (!identityResult.Succeeded)
             {
                 var message = string.Join(", ", identityResult.Errors.Select(x => $"{x.Code}: {x.Description}"));
                 throw new MicroserviceDatabaseException(message);
             }
+
+            var userManager = scope.ServiceProvider.GetService<UserManager<IdentityUser>>();
+            await userManager!.AddToRolesAsync(user, roles);
+
+            await context.SaveChangesAsync();
+
         }
     }
 }
