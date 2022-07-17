@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PowerfulSpace.Facts.Web.Data;
+using PowerfulSpace.Facts.Web.Infrastructure.Mappers.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +18,15 @@ namespace PowerfulSpace.Facts.Web
 {
     public class Startup
     {
+
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -43,8 +47,14 @@ namespace PowerfulSpace.Facts.Web
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            //MapperRegistration.GetMapperConfiguration();
+
+            services.AddAutoMapper(typeof(Startup).Assembly);
+
             services.AddControllersWithViews();
         }
+
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
