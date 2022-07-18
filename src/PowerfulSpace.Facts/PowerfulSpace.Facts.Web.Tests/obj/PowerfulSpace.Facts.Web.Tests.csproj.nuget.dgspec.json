@@ -150,6 +150,10 @@
               "target": "Package",
               "version": "[4.0.0, )"
             },
+            "Calabonga.UnitOfWork": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Calabonga.UnitOfWork.Controllers": {
               "target": "Package",
               "version": "[3.0.3, )"
