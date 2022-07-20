@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Data.Base
 {
@@ -26,6 +28,30 @@ namespace PowerfulSpace.Facts.Web.Data.Base
         {
             builder.ApplyConfigurationsFromAssembly(typeof(Startup).Assembly);
             base.OnModelCreating(builder);
+        }
+
+        public override int SaveChanges()
+        {
+            DbSaveChanges();
+            return base.SaveChanges();
+        }
+
+        public override int SaveChanges(bool acceptAllChangesOnSuccess)
+        {
+            DbSaveChanges();
+            return base.SaveChanges(acceptAllChangesOnSuccess);
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            DbSaveChanges();
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+        {
+            DbSaveChanges();
+            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
 
@@ -51,24 +77,29 @@ namespace PowerfulSpace.Facts.Web.Data.Base
 
 
 
-                if (string.IsNullOrEmpty(createdBy.ToString()))
+                if (string.IsNullOrEmpty(createdBy?.ToString()))
                     entry.Property(nameof(IAuditable.CreatedBy)).CurrentValue = defaultUser;
 
-                if (string.IsNullOrEmpty(updatedBy.ToString()))
+                if (string.IsNullOrEmpty(updatedBy?.ToString()))
                     entry.Property(nameof(IAuditable.UpdatedBy)).CurrentValue = defaultUser;
 
 
-                if (DateTime.Parse(createdAt.ToString()!).Year < 1970)
+                if (DateTime.Parse(createdAt?.ToString()!).Year < 1970)
                     entry.Property(nameof(IAuditable.CreatedAt)).CurrentValue = defaultDate;
 
                 if (updatedAt != null && DateTime.Parse(updatedAt.ToString()!).Year < 1970)
+                {
                     entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue = defaultDate;
+                }
+                else
+                {
+                    entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue = defaultDate;
+                }
+                    
 
 
                 SaveChangesResult.AddMessage("Some entities were created");
             }
-
-
 
 
             var modifiedEntities = ChangeTracker.Entries().Where(x => x.State == EntityState.Modified);

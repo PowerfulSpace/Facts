@@ -15,6 +15,10 @@ namespace PowerfulSpace.Facts.Web.Data
         {
         }
 
+        public DbSet<Fact> Facts { get; set; }
+
+        public DbSet<Tag> Tags { get; set; }
+
     }
 
 }
