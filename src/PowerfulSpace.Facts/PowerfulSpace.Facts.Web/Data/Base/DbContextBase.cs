@@ -96,8 +96,6 @@ namespace PowerfulSpace.Facts.Web.Data.Base
                     entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue = defaultDate;
                 }
                     
-
-
                 SaveChangesResult.AddMessage("Some entities were created");
             }
 
@@ -115,6 +113,8 @@ namespace PowerfulSpace.Facts.Web.Data.Base
                     entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue = DateTime.UtcNow;
                     entry.Property(nameof(IAuditable.UpdatedBy)).CurrentValue = userName;
                 }
+
+                SaveChangesResult.AddMessage("Some entities were modified");
             }
 
 

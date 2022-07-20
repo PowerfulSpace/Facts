@@ -9,17 +9,19 @@ using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Controllers
 {
-    public class HomeController : Controller
+    public class SiteController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        public SiteController() { }
 
-        public IActionResult Index()
+
+        public IActionResult Index(int? pageIndex, string tag, string search)
         {
+
+            ViewData["Index"] = pageIndex;
+            ViewData["Tag"] = tag;
+            ViewData["Search"] = search;
+
             return View();
         }
 
