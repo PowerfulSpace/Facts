@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>aspnet-PowerfulSpace.Facts.Web-5F83CAA5-39F3-456D-A0FA-B95068352382</UserSecretsId>
-    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+	  <TargetFramework>net5.0</TargetFramework>
+	  <UserSecretsId>aspnet-PowerfulSpace.Facts.Web-5F83CAA5-39F3-456D-A0FA-B95068352382</UserSecretsId>
+	  <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

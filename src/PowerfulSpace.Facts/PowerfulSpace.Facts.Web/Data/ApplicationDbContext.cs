@@ -19,6 +19,8 @@ namespace PowerfulSpace.Facts.Web.Data
 
         public DbSet<Tag> Tags { get; set; }
 
+        public DbSet<Notification> Notifications { get; set; }
+
     }
 
 }

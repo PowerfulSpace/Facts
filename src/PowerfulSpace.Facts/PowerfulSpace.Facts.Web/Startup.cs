@@ -1,3 +1,4 @@
+using Calabonga.AspNetCore.Controllers.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -47,9 +48,14 @@ namespace PowerfulSpace.Facts.Web
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            //MapperRegistration.GetMapperConfiguration();
 
+            //MapperRegistration.GetMapperConfiguration();
             services.AddAutoMapper(typeof(Startup).Assembly);
+
+
+            //Подключение медиатра
+            services.AddCommandAndQueries(typeof(Startup).Assembly);
+
 
             services.AddControllersWithViews();
         }
