@@ -16,7 +16,6 @@ namespace PowerfulSpace.Facts.Web.Data.Configurations
 
             builder.Property(x => x.Id);
 
-            builder.Property(x => x.Content).IsRequired().HasMaxLength(3000);
             builder.Property(x => x.CreatedAt).IsRequired();
             builder.Property(x => x.CreatedBy).IsRequired().HasMaxLength(50);
             builder.Property(x => x.UpdatedAt);
