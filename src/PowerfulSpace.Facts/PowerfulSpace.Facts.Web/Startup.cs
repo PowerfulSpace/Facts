@@ -1,4 +1,5 @@
 using Calabonga.AspNetCore.Controllers.Extensions;
+using Calabonga.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -52,6 +53,8 @@ namespace PowerfulSpace.Facts.Web
             //MapperRegistration.GetMapperConfiguration();
             services.AddAutoMapper(typeof(Startup).Assembly);
 
+            //Подключени notification
+            services.AddUnitOfWork<ApplicationDbContext>();
 
             //Подключение медиатра
             services.AddCommandAndQueries(typeof(Startup).Assembly);

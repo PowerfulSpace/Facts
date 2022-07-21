@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PowerfulSpace.Facts.Web.Mediatr;
 using PowerfulSpace.Facts.Web.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -12,7 +14,13 @@ namespace PowerfulSpace.Facts.Web.Controllers
     public class SiteController : Controller
     {
 
-        public SiteController() { }
+        private readonly IMediator _mediator;
+
+
+        public SiteController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
 
 
         public IActionResult Index(int? pageIndex, string tag, string search)
@@ -25,8 +33,9 @@ namespace PowerfulSpace.Facts.Web.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
+            await _mediator.Publish(new ErrorNotification("Privicy test for notification"), HttpContext.RequestAborted);
             return View();
         }
 

@@ -37,7 +37,7 @@ namespace PowerfulSpace.Facts.Web.Extensions
         }
 
         private static readonly Action<ILogger,string,Exception?> DatabaseSavingErrorExecute =
-            LoggerMessage.Define<string>(LogLevel.Information, EventIdentifiers.DatabaseSavingErrorId, " {entityName}");
+            LoggerMessage.Define<string>(LogLevel.Error, EventIdentifiers.DatabaseSavingErrorId, " {entityName}");
 
     }
 }
