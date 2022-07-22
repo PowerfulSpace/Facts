@@ -15,7 +15,7 @@ namespace PowerfulSpace.Facts.Web.Mediatr
 
     public class FeedbackNotificationHandler : NotificationHandlerBase<FeedbackNotification>
     {
-        public FeedbackNotificationHandler(IUnitOfWork unitOfWork, ILogger logger) 
+        public FeedbackNotificationHandler(IUnitOfWork unitOfWork, ILogger<FeedbackNotification> logger) 
             : base(unitOfWork, logger)
         {
         }

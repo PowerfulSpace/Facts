@@ -13,9 +13,9 @@ namespace PowerfulSpace.Facts.Web.Mediatr.Base
     public abstract class NotificationHandlerBase<T> : INotificationHandler<T> where T : NotificationBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly ILogger _logger;
+        private readonly ILogger<T> _logger;
 
-        public NotificationHandlerBase(IUnitOfWork unitOfWork,ILogger logger)
+        public NotificationHandlerBase(IUnitOfWork unitOfWork,ILogger<T> logger)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
