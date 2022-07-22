@@ -24,5 +24,6 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Razor\.nuget\packages\microsoft.entityframeworkcore.tools\5.0.11</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\Razor\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgBuildBundlerMinifier Condition=" '$(PkgBuildBundlerMinifier)' == '' ">C:\Users\Razor\.nuget\packages\buildbundlerminifier\3.2.449</PkgBuildBundlerMinifier>
   </PropertyGroup>
 </Project>

@@ -356,7 +356,6 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.csproj.AssemblyReference.cache
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.GeneratedMSBuildEditorConfig.editorconfig
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.AssemblyInfoInputs.cache
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.AssemblyInfo.cs
@@ -416,3 +415,4 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Shared\_LayoutColumn.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Site\Index.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Site\Privacy.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\bundleconfig.json
