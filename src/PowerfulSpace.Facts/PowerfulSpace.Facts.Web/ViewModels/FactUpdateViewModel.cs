@@ -9,8 +9,8 @@ namespace PowerfulSpace.Facts.Web.ViewModels
     {
         public Guid Id { get; set; }
 
-        public string Content { get; set; }
+        public string Content { get; set; } = null!;
 
-        public IEnumerable<string> Tags { get; set; }
+        public IEnumerable<string> Tags { get; set; } = null!;
     }
 }

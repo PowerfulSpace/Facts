@@ -8,8 +8,8 @@ namespace PowerfulSpace.Facts.Web.Data
 {
     public class Tag : Identity
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
-        public ICollection<Fact> Facts { get; set; }
+        public ICollection<Fact> Facts { get; set; } = null!;
     }
 }

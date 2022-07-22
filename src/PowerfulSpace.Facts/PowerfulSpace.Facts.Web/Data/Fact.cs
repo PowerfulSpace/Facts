@@ -8,8 +8,8 @@ namespace PowerfulSpace.Facts.Web.Data
 {
     public class Fact : Auditable
     {
-        public string Content { get; set; }
+        public string Content { get; set; } = null!;
 
-        public ICollection<Tag> Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; } = null!;
     }
 }

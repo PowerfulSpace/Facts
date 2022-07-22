@@ -1,17 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Extensions
 {
-    
+
     static class EventIdentifiers
     {
 
         public static readonly EventId DatabaseSavingErrorId = new EventId(70040001, "DatabaseSavingError");
-        public static readonly EventId NotificationAddedId = new EventId(70040001, "DatabaseSavingError");
+        public static readonly EventId NotificationAddedId = new EventId(70040001, "NotificationAdded");
     }
 
 
@@ -25,7 +22,7 @@ namespace PowerfulSpace.Facts.Web.Extensions
         }
 
         private static readonly Action<ILogger, string, Exception?> NotificationAddedExecute =
-            LoggerMessage.Define<string>(LogLevel.Information, EventIdentifiers.NotificationAddedId, "New notification created: {entityName}");
+            LoggerMessage.Define<string>(LogLevel.Information, EventIdentifiers.NotificationAddedId, "New notification created: {subject}");
 
 
 
@@ -36,7 +33,7 @@ namespace PowerfulSpace.Facts.Web.Extensions
             DatabaseSavingErrorExecute(source, entityName, exception);
         }
 
-        private static readonly Action<ILogger,string,Exception?> DatabaseSavingErrorExecute =
+        private static readonly Action<ILogger, string, Exception?> DatabaseSavingErrorExecute =
             LoggerMessage.Define<string>(LogLevel.Error, EventIdentifiers.DatabaseSavingErrorId, " {entityName}");
 
     }

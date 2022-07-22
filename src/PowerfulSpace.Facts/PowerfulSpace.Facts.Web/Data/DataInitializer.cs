@@ -32,7 +32,7 @@ namespace PowerfulSpace.Facts.Web.Data
             }
 
             //Если бд не существует, Создать бд
-            await context.Database.MigrateAsync();
+            await context!.Database.MigrateAsync();
 
             //Получаем все роли
             var roles = AppData.Roles.ToArray();

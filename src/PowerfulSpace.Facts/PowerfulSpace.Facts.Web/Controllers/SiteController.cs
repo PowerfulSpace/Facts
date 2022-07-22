@@ -36,6 +36,7 @@ namespace PowerfulSpace.Facts.Web.Controllers
         public async Task<IActionResult> Privacy()
         {
             await _mediator.Publish(new ErrorNotification("Privicy test for notification"), HttpContext.RequestAborted);
+            await _mediator.Publish(new FeedbackNotification("Hello your site os working good.Thanks"), HttpContext.RequestAborted);
             return View();
         }
 

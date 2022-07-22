@@ -50,11 +50,11 @@ namespace PowerfulSpace.Facts.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
-            //MapperRegistration.GetMapperConfiguration();
-            services.AddAutoMapper(typeof(Startup).Assembly);
-
             //Подключени notification
             services.AddUnitOfWork<ApplicationDbContext>();
+
+            //MapperRegistration.GetMapperConfiguration();
+            services.AddAutoMapper(typeof(Startup));
 
             //Подключение медиатра
             services.AddCommandAndQueries(typeof(Startup).Assembly);

@@ -14,7 +14,7 @@ namespace PowerfulSpace.Facts.Web.Infrastructure.Mappers.Base
             var profiles = GetProfiles();
             return new MapperConfiguration(config =>
             {
-                foreach (var profile in profiles.Select(profile => (Profile)Activator.CreateInstance(profile)))
+                foreach (var profile in profiles.Select(profile => (Profile)Activator.CreateInstance(profile)!))
                 {
                     config.AddProfile(profile);
                 };
