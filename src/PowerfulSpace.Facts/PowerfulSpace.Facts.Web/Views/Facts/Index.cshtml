@@ -8,6 +8,8 @@
 
 @if (Model is not null)
 {
+    <pager asp-text="dfsfsdfsdfff"></pager>
+
     foreach (var fact in @Model.Result.Items)
     {
         <partial name="_Fact" model="fact" />
@@ -16,7 +18,11 @@
 
 
 @section Column {
-    <p>
-        Привет
-    </p>
+
+    <div class="my-3">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
 }

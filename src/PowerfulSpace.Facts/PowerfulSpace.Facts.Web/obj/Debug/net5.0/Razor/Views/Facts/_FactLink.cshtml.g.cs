@@ -27,7 +27,7 @@ using PowerfulSpace.Facts.Web.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a92d55160c2d58254b804717155f1b12c4258b27", @"/Views/Facts/_FactLink.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3d9b6b0faf6b2dbb6a89938ac6227cb40d2eb6c0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"937978832bef71399d41d2fcf202a36ec01eba56", @"/Views/_ViewImports.cshtml")]
     public class Views_Facts__FactLink : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Guid>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Facts", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

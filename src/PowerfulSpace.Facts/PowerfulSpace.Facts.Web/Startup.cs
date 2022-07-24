@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PowerfulSpace.Facts.Web.Data;
 using PowerfulSpace.Facts.Web.Infrastructure.Mappers.Base;
+using PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +60,7 @@ namespace PowerfulSpace.Facts.Web
             //Подключение медиатра
             services.AddCommandAndQueries(typeof(Startup).Assembly);
 
+            services.AddTransient<IPagerTagHelperService, PagerTagHelperService>();
 
             services.AddControllersWithViews();
         }
