@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gxQ5bH8eh4Itn/XEodulRdmBRd7l/VF6CLAhwbVvaAVUyOj6kkRfuFFVJesdUT1E+bg62SjDldeTZkQ3vxHefQ==",
+  "dgSpecHash": "vwk89FW3Ug85JJeK8PWfm+HZuMb0ofaEgAhZ6BU9+s0HkmDx+pgl9rZPB21mGePUPYEyDS44diasAOLZayq78A==",
   "success": true,
   "projectFilePath": "D:\\Git_Repositories\\Projects\\Facts\\src\\PowerfulSpace.Facts\\PowerfulSpace.Facts.Web.Tests\\PowerfulSpace.Facts.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -58,9 +58,9 @@
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
-    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.11\\microsoft.entityframeworkcore.5.0.11.nupkg.sha512",
-    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.11\\microsoft.entityframeworkcore.abstractions.5.0.11.nupkg.sha512",
-    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.11\\microsoft.entityframeworkcore.analyzers.5.0.11.nupkg.sha512",
+    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
+    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
+    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.autohistory\\3.1.3\\microsoft.entityframeworkcore.autohistory.3.1.3.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.11\\microsoft.entityframeworkcore.design.5.0.11.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.11\\microsoft.entityframeworkcore.relational.5.0.11.nupkg.sha512",

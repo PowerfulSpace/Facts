@@ -23,20 +23,15 @@ namespace PowerfulSpace.Facts.Web.Controllers
         }
 
 
-        public IActionResult Index(int? pageIndex, string tag, string search)
+        public IActionResult Index()
         {
-
-            ViewData["Index"] = pageIndex;
-            ViewData["Tag"] = tag;
-            ViewData["Search"] = search;
-
             return View();
         }
 
-        public async Task<IActionResult> Privacy()
+        public IActionResult Privacy()
         {
-            await _mediator.Publish(new ErrorNotification("Privicy test for notification"), HttpContext.RequestAborted);
-            await _mediator.Publish(new FeedbackNotification("Hello your site os working good.Thanks"), HttpContext.RequestAborted);
+            //await _mediator.Publish(new ErrorNotification("Privicy test for notification"), HttpContext.RequestAborted);
+            //await _mediator.Publish(new FeedbackNotification("Hello your site os working good.Thanks"), HttpContext.RequestAborted);
             return View();
         }
 

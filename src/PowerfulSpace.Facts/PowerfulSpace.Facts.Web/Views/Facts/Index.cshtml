@@ -1,0 +1,22 @@
+﻿@model Calabonga.OperationResults.OperationResult<Calabonga.UnitOfWork.IPagedList<FactViewModel>>
+
+
+@{
+    Layout = "_LayoutColumn";
+    ViewData["Title"] = "Facts Page";
+}
+
+@if (Model is not null)
+{
+    foreach (var fact in @Model.Result.Items)
+    {
+        <partial name="_Fact" model="fact" />
+    }
+}
+
+
+@section Column {
+    <p>
+        Привет
+    </p>
+}

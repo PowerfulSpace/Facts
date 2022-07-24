@@ -90,20 +90,24 @@ namespace PowerfulSpace.Facts.Web
             {
                 endpoints.MapControllerRoute(
                   name: "search",
-                  pattern: "{controller=Site}/{action=Index}/{tag:regex([a-z¿-ﬂ])}/{search:regex([a-z¿-ﬂ])}/{pageIndex:int?}");
+                  pattern: "{controller=Facts" +
+                  "}/{action=Index}/{tag:regex([a-z¿-ﬂ])}/{search:regex([a-z¿-ﬂ])}/{pageIndex:int?}");
 
                 endpoints.MapControllerRoute(
                    name: "tag",
-                   pattern: "{controller=Site}/{action=Index}/{tag:regex([a-z¿-ﬂ])}/{pageIndex:int?}");
+                   pattern: "{controller=Facts" +
+                   "}/{action=Index}/{tag:regex([a-z¿-ﬂ])}/{pageIndex:int?}");
 
                 endpoints.MapControllerRoute(
                   name: "index",
-                  pattern: "{controller=Site}/{action=Index}/{pageIndex:int?}");
+                  pattern: "{controller=Facts" +
+                  "}/{action=Index}/{pageIndex:int?}");
 
 
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Site}/{action=Index}/{id?}");
+                    pattern: "{controller=Facts" +
+                    "}/{action=Index}/{id?}");
 
 
                 endpoints.MapRazorPages();
