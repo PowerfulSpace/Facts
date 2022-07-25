@@ -8,7 +8,10 @@
 
 @if (Model is not null)
 {
-    <pager asp-text="dfsfsdfsdfff"></pager>
+    <pager
+           asp-paged-list-page-index="Model.Result.PageIndex"
+           asp-paged-list-page-size="Model.Result.PageSize"
+           asp-paged-list-total-count="Model.Result.TotalCount"></pager>
 
     foreach (var fact in @Model.Result.Items)
     {
