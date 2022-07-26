@@ -2,6 +2,7 @@ using Calabonga.AspNetCore.Controllers.Extensions;
 using Calabonga.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -119,7 +120,13 @@ namespace PowerfulSpace.Facts.Web
                     "}/{action=Index}/{id?}");
 
 
+
                 endpoints.MapRazorPages();
+
+
+                endpoints.MapGet("/Identity/Account/Register", context => Task.Factory.StartNew(() =>
+                context.Response.Redirect("/Identity/Account/Login?returnUrl=~%2F", true, true)));
+
             });
         }
     }
