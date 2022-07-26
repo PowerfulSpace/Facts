@@ -54,8 +54,6 @@ namespace PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper
         [HtmlAttributeName(PagerListPageTotalCountAttributeName)]
         public int PagedListTotalCount { get; set; }
 
-
-
         [HtmlAttributeName(PagerListActionAttributeName)]
         public string ActionName { get; set; }
 
@@ -64,8 +62,6 @@ namespace PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper
 
         [HtmlAttributeName(PagedListRouteDataAttributeName)]
         public object? RouteParameters { get; set; }
-
-
 
         [HtmlAttributeName(FragmentAttributeName)]
         public string Fragment { get; set; }

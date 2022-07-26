@@ -421,3 +421,4 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\_FactLink.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\_Tags.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.csproj.AssemblyReference.cache
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\Show.cshtml.g.cs

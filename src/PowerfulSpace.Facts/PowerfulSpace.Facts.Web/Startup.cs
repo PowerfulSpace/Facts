@@ -62,6 +62,13 @@ namespace PowerfulSpace.Facts.Web
 
             services.AddTransient<IPagerTagHelperService, PagerTagHelperService>();
 
+
+            services.AddRouting(config =>
+            {
+                config.LowercaseQueryStrings = true;
+                config.LowercaseUrls = true;
+            });
+
             services.AddControllersWithViews();
         }
 

@@ -1,0 +1,19 @@
+﻿
+@using Calabonga.OperationResults
+@model Calabonga.OperationResults.OperationResult<PowerfulSpace.Facts.Web.ViewModels.FactViewModel>
+
+@{
+    ViewData["HideLink"] = true;
+}
+
+@if (!Model.Ok)
+{
+    <h1>Ошибка</h1>
+    <p class="alert alert-warning">
+        @Model.Metadata.Message
+    </p>
+}
+else
+{
+    <partial name="_Fact" model="@Model.Result" view-data="ViewData" />
+}
