@@ -10,6 +10,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Calabonga.PredicatesBuilder;
+using System.Linq.Expressions;
 
 namespace PowerfulSpace.Facts.Web.Controllers.Facts.Query
 {
@@ -45,8 +47,12 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts.Query
         {
             var operation = OperationResult.CreateResult<IPagedList<FactViewModel>>();
 
+            var predicate = BuildPredicate(request);
+
+
             var items = await _unitOfWork.GetRepository<Fact>()
                 .GetPagedListAsync(
+                predicate: predicate,
                 include: i => i.Include(x => x.Tags),
                 orderBy: o => o.OrderByDescending(x => x.CreatedAt),
                 pageIndex: request.PageIndex,
@@ -58,6 +64,26 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts.Query
             operation.AddSuccess("Success");
 
             return operation;
+        }
+
+
+
+        private Expression<Func<Fact,bool>> BuildPredicate(FactGetPagedRequest request)
+        {
+            var predicate = PredicateBuilder.True<Fact>();
+
+
+            if (!string.IsNullOrWhiteSpace(request.Search))
+            {
+                predicate = predicate.And(x => x.Content.Contains(request.Search));
+            }
+
+            if (!string.IsNullOrWhiteSpace(request.Tag))
+            {
+                predicate = predicate.And(x => x.Tags.Select(t => t.Name).Contains(request.Tag));
+            }
+
+            return predicate;
         }
     }
 }

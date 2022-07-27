@@ -3928,6 +3928,7 @@
           "Calabonga.AspNetCore.Controllers": "3.0.1",
           "Calabonga.EntityFrameworkCore.Entities.Base": "3.0.1",
           "Calabonga.Microservices.Core": "4.0.0",
+          "Calabonga.PredicatesBuilder": "2.0.0",
           "Calabonga.UnitOfWork": "2.1.0",
           "Calabonga.UnitOfWork.Controllers": "3.0.3",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.11",
