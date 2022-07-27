@@ -22,13 +22,25 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
         {
             ViewData["search"] = search;
             ViewData["tag"] = tag;
-            var operationResult = await _mediator.Send(new FactGetPagedRequest(pageIndex ?? 1, tag, search), HttpContext.RequestAborted);
+
+            var index = pageIndex ?? 1;
+
+            var operationResult = await _mediator.Send(new FactGetPagedRequest(index, tag, search), HttpContext.RequestAborted);
+           
+            if(operationResult.Ok && operationResult.Result.TotalPages > index)
+            {
+                return RedirectToAction(nameof(Index), new { tag, search, pageIndex = 1 });
+            }
+
             return View(operationResult);
+
         }
 
 
-        public async Task<IActionResult> Show(Guid id)
-        {          
+        public async Task<IActionResult> Show(Guid id, string? returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+
             var fact = await _mediator.Send(new FactGetByIdRequest(id), HttpContext.RequestAborted);
             return View(fact);
         }
