@@ -63,14 +63,29 @@ namespace PowerfulSpace.Facts.Web.Controllers
             {
                 try
                 {
+                    if(TempData["Capture"] is null)
+                    {
+                        ModelState.AddModelError("_Form", "Извините, не могу отправить сообщение, не работает reCapture");
+                        ViewData["Subject"] = _subject;
+                        return View(model);
+                    }
+
+                    var result = int.Parse(TempData["Capture"].ToString()!);
+
+                    if (model.HumanNumber != result)
+                    {
+                        ModelState.AddModelError("_Form", "Извините, не могу отправить сообщение, результат вычисления не верный");
+                        ViewData["Subject"] = _subject;
+                        return View(model);
+                    }
+
                     await _mediator.Publish(new FeedbackNotification(model));
                     TempData["Feedback"] = "Feedback";
                     return RedirectToAction("FeedbackSent", "Site");
                 }
                 catch (Exception ex)
                 {
-
-                    return RedirectToAction("_Form", "Извините, не могу отправить сообщение:\n" + ex.Message);
+                    ModelState.AddModelError("_Form", "Извините, не могу отправить сообщение:\n" + ex.Message);
                 }
             }
 
@@ -96,8 +111,8 @@ namespace PowerfulSpace.Facts.Web.Controllers
         {
             Random r = new();
             x ??= r.Next(21, 30);
-            y ??= r.Next(21, 30);
-            z ??= r.Next(21, 30);
+            y ??= r.Next(11, 20);
+            z ??= r.Next(1, 30);
 
             var width = 100;
             var height = 30;
@@ -119,7 +134,7 @@ namespace PowerfulSpace.Facts.Web.Controllers
             var font = new Font("Arial", 14, FontStyle.Bold);
             var brush = new SolidBrush(foregroundColors[r.Next(0, foregroundColors.Length - 1)]);
 
-            g.DrawString($"{x} + {y} - {z}", font, brush, new PointF(50, 15), stringFormat);
+            g.DrawString($"{x}+{y}-{z}", font, brush, new PointF(50, 15), stringFormat);
 
             var filename = string.Concat(_environment.WebRootPath, "/", Guid.NewGuid().ToString("N"));
 

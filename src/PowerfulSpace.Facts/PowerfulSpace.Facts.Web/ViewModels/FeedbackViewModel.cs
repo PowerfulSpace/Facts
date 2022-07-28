@@ -13,10 +13,12 @@ namespace PowerfulSpace.Facts.Web.ViewModels
         [Display(Name ="Тема сообщения")]
         public string Subject { get; set; } = null!;
 
+
         [Required(ErrorMessage = "{0} - Обязательное поле")]
         [StringLength(50, ErrorMessage = "Длина {0} не должна превышать {1} символ")]
         [Display(Name = "Имя")]
         public string UserName { get; set; } = null!;
+
 
         [Required(ErrorMessage = "{0} - Обязательное поле")]
         [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$",ErrorMessage = "{0} - неверный формат")]
@@ -24,11 +26,18 @@ namespace PowerfulSpace.Facts.Web.ViewModels
         [Display(Name = "Email")]
         public string MailForm { get; set; } = null!;
 
+
         [Required(ErrorMessage = "{0} - Обязательное поле")]
         [StringLength(50, ErrorMessage = "Длина {0} не должна превышать {1} символ")]
         [DataType(DataType.MultilineText)]
         [Display(Name = "Текст сообщения")]
         public string Body { get; set; } = null!;
+
+
+        [Required(ErrorMessage = "{0} - Обязательное поле")]
+        [Display(Name = "Результат вычисления")]
+        public int HumanNumber { get; set; }
+
 
 
         public override string ToString()
