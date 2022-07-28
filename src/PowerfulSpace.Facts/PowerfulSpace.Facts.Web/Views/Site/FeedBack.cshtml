@@ -1,0 +1,56 @@
+﻿
+@model FeedbackViewModel
+
+@{
+    ViewData["Title"] = "Обратная связь";
+
+}
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-8 col-xl-8">
+        <h1>@ViewData["Title"]</h1>
+
+        <p class="small text-muted">Все поля обязательны для заполнения.</p>
+
+        <form asp-controller="Site" asp-action="Feedback" method="post" role="form">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+            <div class="mb-3">
+                <label asp-for="Subject"></label>
+                @Html.DropDownListFor(model => model.Subject, (IEnumerable<SelectListItem>)ViewData["Subjects"], "",
+               new Dictionary<string, object> { { "class", "form-control" } })
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control" type="text" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="MailForm"></label>
+                <input asp-for="MailForm" class="form-control" type="text" />
+                <span asp-validation-for="MailForm" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Body"></label>
+                <textarea asp-for="Body" row="6" class="form-control"></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+            </div>
+            <p>
+                <button class="btn btn-primary" type="submit">Отправить</button>
+            </p>
+        </form>
+
+    </div>
+</div>
+
+
+
+@section scripts
+{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

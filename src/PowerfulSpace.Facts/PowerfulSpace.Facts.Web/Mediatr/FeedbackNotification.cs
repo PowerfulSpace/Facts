@@ -1,14 +1,15 @@
 ﻿using Calabonga.UnitOfWork;
 using Microsoft.Extensions.Logging;
 using PowerfulSpace.Facts.Web.Mediatr.Base;
+using PowerfulSpace.Facts.Web.ViewModels;
 using System;
 
 namespace PowerfulSpace.Facts.Web.Mediatr
 {
     public class FeedbackNotification : NotificationBase
     {
-        public FeedbackNotification(string content, Exception? exception = null)
-            : base("FEEDBACK from powerfulFacts.ru", content, "powerful@space.com", "noreply@space.com", exception)
+        public FeedbackNotification(FeedbackViewModel model)
+            : base("FEEDBACK from powerfulFacts.by", model.ToString()!, "powerful@space.com", "noreply@space.com")
         {
         }
     }
