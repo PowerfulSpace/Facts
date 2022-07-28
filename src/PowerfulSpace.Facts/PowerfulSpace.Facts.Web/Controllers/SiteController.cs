@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
@@ -7,6 +8,11 @@ using PowerfulSpace.Facts.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,13 +20,14 @@ namespace PowerfulSpace.Facts.Web.Controllers
 {
     public class SiteController : Controller
     {
-
+        private readonly IWebHostEnvironment _environment;
         private readonly IMediator _mediator;
         private readonly List<SelectListItem> _subject;
 
 
-        public SiteController(IMediator mediator)
+        public SiteController(IMediator mediator, IWebHostEnvironment environment)
         {
+            _environment = environment;
             _mediator = mediator;
 
             _subject = new List<string>
@@ -81,6 +88,54 @@ namespace PowerfulSpace.Facts.Web.Controllers
                 return RedirectToAction("Index", "Facts");
             }
             return View();
+        }
+
+
+
+        public IActionResult GetImage(int? x, int? y, int? z)
+        {
+            Random r = new();
+            x ??= r.Next(21, 30);
+            y ??= r.Next(21, 30);
+            z ??= r.Next(21, 30);
+
+            var width = 100;
+            var height = 30;
+            using Bitmap bmp = new Bitmap(width, height);
+            using var g = Graphics.FromImage(bmp);
+
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            g.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
+
+            var stringFormat = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+
+            var backgroundColors = new[] { Color.BlueViolet, Color.Blue, Color.Brown, Color.DarkMagenta, Color.DarkGreen };
+            var foregroundColors = new[] { Color.AliceBlue, Color.Gold, Color.GhostWhite, Color.Aqua, Color.Ivory };
+
+            g.Clear(backgroundColors[r.Next(0, backgroundColors.Length - 1)]);
+
+            var font = new Font("Arial", 14, FontStyle.Bold);
+            var brush = new SolidBrush(foregroundColors[r.Next(0, foregroundColors.Length - 1)]);
+
+            g.DrawString($"{x} + {y} - {z}", font, brush, new PointF(50, 15), stringFormat);
+
+            var filename = string.Concat(_environment.WebRootPath, "/", Guid.NewGuid().ToString("N"));
+
+            bmp.Save(filename, ImageFormat.MemoryBmp);
+
+            byte[] bytes;
+            using (FileStream stream = new FileStream(filename, FileMode.Open))
+            {
+                bytes = new byte[stream.Length];
+                stream.Read(bytes, 0, bytes.Length);
+            }
+
+            System.IO.File.Delete(filename);
+            TempData["Capture"] = x + y - z;
+
+            return new FileContentResult(bytes, "image/jpeg");
         }
 
 

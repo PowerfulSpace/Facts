@@ -118,6 +118,10 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[6.0.0-dev-00265, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.3, )"
             }
           },
           "imports": [
