@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using Microsoft.JSInterop;
+using Powerful.Facts.RazorLibrary;
 using PowerfulSpace.Facts.Web.Mediatr;
 using PowerfulSpace.Facts.Web.ViewModels;
 using System;
@@ -20,13 +22,15 @@ namespace PowerfulSpace.Facts.Web.Controllers
 {
     public class SiteController : Controller
     {
+        private readonly IJSRuntime _jsRuntime;
         private readonly IWebHostEnvironment _environment;
         private readonly IMediator _mediator;
         private readonly List<SelectListItem> _subject;
 
 
-        public SiteController(IMediator mediator, IWebHostEnvironment environment)
+        public SiteController(IJSRuntime jsRuntime,IMediator mediator, IWebHostEnvironment environment)
         {
+            _jsRuntime = jsRuntime;
             _environment = environment;
             _mediator = mediator;
 
@@ -43,7 +47,12 @@ namespace PowerfulSpace.Facts.Web.Controllers
 
 
 
-        public IActionResult About() => View();
+        public async Task<IActionResult> About()
+        {
+            var interop = new RazorInterop(_jsRuntime);
+            await interop.ShowToast("test", "tetle");
+            return View();
+        }
 
         public IActionResult Random() => View();
 

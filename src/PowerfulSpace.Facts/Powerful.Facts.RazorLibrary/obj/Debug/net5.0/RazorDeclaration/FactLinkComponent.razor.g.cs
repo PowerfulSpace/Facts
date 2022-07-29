@@ -19,13 +19,34 @@ using Microsoft.AspNetCore.Components.Web;
 #line default
 #line hidden
 #nullable disable
-    public partial class Component1 : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\FactLinkComponent.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class FactLinkComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 5 "D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\FactLinkComponent.razor"
+        
+
+    [Inject]IJSRuntime jSRuntime { get; set; }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var interop = new RazorInterop(jSRuntime);
+        await interop.ShowToast("asdsadas", "dsdasdasdasdas");
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

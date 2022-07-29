@@ -1,0 +1,13 @@
+﻿@using Microsoft.JSInterop
+
+<span>Скопировать ссылку</span>
+
+@code { 
+
+    [Inject]IJSRuntime jSRuntime { get; set; }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var interop = new RazorInterop(jSRuntime);
+        await interop.ShowToast("asdsadas", "dsdasdasdasdas");
+    }
+}

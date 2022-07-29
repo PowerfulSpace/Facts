@@ -481,7 +481,6 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\SendNotification.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\_NotificationView.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.csproj.AssemblyReference.cache
-D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Powerful.Facts.RazorLibrary.StaticWebAssets.xml
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll

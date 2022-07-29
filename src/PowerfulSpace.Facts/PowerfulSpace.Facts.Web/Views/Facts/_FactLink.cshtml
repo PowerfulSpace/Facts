@@ -1,10 +1,12 @@
-﻿@using PowerfulSpace.Facts.Web.Extensions
+﻿
+@using Powerful.Facts.RazorLibrary
+@using PowerfulSpace.Facts.Web.Extensions
 @model Guid
 
 
 @if (ViewData["HideLink"] is not null)
 {
-    <span>Скопировать ссылку</span>
+    <component type="typeof(FactLinkComponent)" render-mode="ServerPrerendered" />
 }
 else
 {

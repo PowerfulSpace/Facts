@@ -127,6 +127,7 @@ namespace PowerfulSpace.Facts.Web
 
                 endpoints.MapRazorPages();
 
+                endpoints.MapBlazorHub();
 
                 endpoints.MapGet("/Identity/Account/Register", context => Task.Factory.StartNew(() =>
                 context.Response.Redirect("/Identity/Account/Login?returnUrl=~%2F", true, true)));

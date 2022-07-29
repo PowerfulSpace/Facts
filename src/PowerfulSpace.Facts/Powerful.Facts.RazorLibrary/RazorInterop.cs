@@ -11,20 +11,20 @@ namespace Powerful.Facts.RazorLibrary
     // This class can be registered as scoped DI service and then injected into Blazor
     // components for use.
 
-    public class ExampleJsInterop : IAsyncDisposable
+    public class RazorInterop : IAsyncDisposable
     {
         private readonly Lazy<Task<IJSObjectReference>> moduleTask;
 
-        public ExampleJsInterop(IJSRuntime jsRuntime)
+        public RazorInterop(IJSRuntime jsRuntime)
         {
             moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
-               "import", "./_content/Powerful.Facts.RazorLibrary/exampleJsInterop.js").AsTask());
+               "import", "./_content/Powerful.Facts.RazorLibrary/razorLibrary.js").AsTask());
         }
 
-        public async ValueTask<string> Prompt(string message)
+        public async ValueTask<string> ShowToast(string message, string title, string type = "info")
         {
             var module = await moduleTask.Value;
-            return await module.InvokeAsync<string>("showPrompt", message);
+            return await module.InvokeAsync<string>("showToast", message, title, type);
         }
 
         public async ValueTask DisposeAsync()

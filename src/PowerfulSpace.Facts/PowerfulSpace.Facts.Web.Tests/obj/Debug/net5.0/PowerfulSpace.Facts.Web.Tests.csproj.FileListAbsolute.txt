@@ -522,7 +522,6 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\PowerfulSpace.Facts.Web.StaticWebAssets.xml
-D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Powerful.Facts.RazorLibrary.StaticWebAssets.xml
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll

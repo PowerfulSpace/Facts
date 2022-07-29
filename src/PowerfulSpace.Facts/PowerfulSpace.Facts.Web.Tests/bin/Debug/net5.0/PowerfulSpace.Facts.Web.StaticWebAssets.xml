@@ -1,6 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\scopedcss\bundle\" />
   <ContentRoot BasePath="/Identity" Path="C:\Users\Razor\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.17\staticwebassets\V4\" />
-  <ContentRoot BasePath="_content/Powerful.Facts.RazorLibrary" Path="D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\obj\Debug\net5.0\scopedcss\projectbundle\" />
   <ContentRoot BasePath="_content/Powerful.Facts.RazorLibrary" Path="D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\wwwroot\" />
 </StaticWebAssets>
