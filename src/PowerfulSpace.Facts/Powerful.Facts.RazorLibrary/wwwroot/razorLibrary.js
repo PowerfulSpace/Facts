@@ -4,7 +4,7 @@
 
 export function showToast(message, title, type) {
 
-    if (window.toastr) {
+    if (!window.toastr) {
         return;
     }
 
