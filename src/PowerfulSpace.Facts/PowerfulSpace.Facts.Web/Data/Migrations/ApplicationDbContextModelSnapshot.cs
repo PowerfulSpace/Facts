@@ -16,7 +16,7 @@ namespace PowerfulSpace.Facts.Web.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
+                .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("FactTag", b =>
@@ -273,12 +273,12 @@ namespace PowerfulSpace.Facts.Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AddAdressFrom")
+                    b.Property<string>("AddressFrom")
                         .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
-                    b.Property<string>("AddAdressTo")
+                    b.Property<string>("AddressTo")
                         .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
@@ -313,9 +313,9 @@ namespace PowerfulSpace.Facts.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddAdressFrom");
+                    b.HasIndex("AddressFrom");
 
-                    b.HasIndex("AddAdressTo");
+                    b.HasIndex("AddressTo");
 
                     b.HasIndex("Content");
 
@@ -331,6 +331,7 @@ namespace PowerfulSpace.Facts.Web.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 

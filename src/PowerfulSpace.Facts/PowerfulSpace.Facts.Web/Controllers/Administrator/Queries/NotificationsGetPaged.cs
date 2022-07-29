@@ -15,7 +15,6 @@ using System.Threading.Tasks;
 namespace PowerfulSpace.Facts.Web.Controllers.Administrator.Queries
 {
 
-
     public class NotificationGetPagedRequest : RequestBase<OperationResult<IPagedList<NotificationViewModel>>>
     {
         public NotificationGetPagedRequest(int pageIndex, string search, bool notProcessed)
@@ -32,16 +31,13 @@ namespace PowerfulSpace.Facts.Web.Controllers.Administrator.Queries
         public string Search { get; }
     }
 
-
-
     public class NotificationGetPagedRequestHandler : OperationResultRequestHandlerBase<NotificationGetPagedRequest, IPagedList<NotificationViewModel>>, IDisposable
     {
-
         private readonly IUnitOfWork _unitOfWork;
 
-        public NotificationGetPagedRequestHandler(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
-
-
+        public NotificationGetPagedRequestHandler(
+            IUnitOfWork unitOfWork)
+            => _unitOfWork = unitOfWork;
 
         public override async Task<OperationResult<IPagedList<NotificationViewModel>>> Handle(NotificationGetPagedRequest request, CancellationToken cancellationToken)
         {
@@ -58,7 +54,6 @@ namespace PowerfulSpace.Facts.Web.Controllers.Administrator.Queries
 
             return OperationResult.CreateResult(posts);
         }
-
 
         private Expression<Func<Notification, bool>> BuildPredicate(NotificationGetPagedRequest request)
         {
@@ -85,4 +80,5 @@ namespace PowerfulSpace.Facts.Web.Controllers.Administrator.Queries
 
         public void Dispose() => _unitOfWork.Dispose();
     }
+
 }

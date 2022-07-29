@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PowerfulSpace.Facts.Web.Controllers.Administrator.Queries;
 using PowerfulSpace.Facts.Web.Mediatr;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Controllers.Administrator
 {
+    [Authorize]
     public class AdministratorController : Controller
     {
 
@@ -50,7 +52,7 @@ namespace PowerfulSpace.Facts.Web.Controllers.Administrator
 
         public async Task<IActionResult> NotificationById(Guid id)
         {
-            var data = await _mediator.Send(new NotificationGetByIdRequst(id), HttpContext.RequestAborted);
+            var data = await _mediator.Send(new NotificationGetByIdRequest(id), HttpContext.RequestAborted);
             return View(data);
         }
 

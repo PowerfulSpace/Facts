@@ -420,7 +420,6 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\_Fact.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\_FactLink.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\_Tags.cshtml.g.cs
-D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.csproj.AssemblyReference.cache
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\Show.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -482,3 +481,10 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\System.Drawing.Common.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\Add.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\Index.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\NotificationById.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\Notifications.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\SendNotification.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Administrator\_NotificationView.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\PowerfulSpace.Facts.Web.csproj.AssemblyReference.cache

@@ -21,12 +21,12 @@ namespace PowerfulSpace.Facts.Web.Data
 
 
 
-        public Notification(string subject, string content, string addAdressFrom, string addAdressTo)
+        public Notification(string subject, string content, string addressFrom, string addressTo)
         {
             Subject = subject;
             Content = content;
-            AddressFrom = addAdressFrom;
-            AddressTo = addAdressTo;
+            AddressFrom = addressFrom;
+            AddressTo = addressTo;
         }
 
        

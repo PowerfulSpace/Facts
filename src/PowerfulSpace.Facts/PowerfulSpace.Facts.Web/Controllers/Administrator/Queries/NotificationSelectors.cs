@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Controllers.Administrator.Queries
 {
-    public class NotificationSelectors
+    public static class NotificationSelectors
     {
         public static Expression<Func<Notification, NotificationViewModel>> Default => s => new NotificationViewModel
         {

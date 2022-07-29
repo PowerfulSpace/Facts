@@ -10,19 +10,17 @@ namespace PowerfulSpace.Facts.Web.Mediatr
 {
     public class ManualMessageNotification : NotificationBase
     {
-        public ManualMessageNotification(string title, string content, string addAdressTo, string addAdressFrom)
-            : base(title, content, addAdressTo, addAdressFrom, null)
+        public ManualMessageNotification(string title, string content, string addressFrom, string addressTo)
+            : base(title, content, addressFrom, addressTo, null)
         {
         }
     }
 
-
     public class ManualMessageNotificationHandler : NotificationHandlerBase<ManualMessageNotification>
     {
         public ManualMessageNotificationHandler(IUnitOfWork unitOfWork, ILogger<ManualMessageNotification> logger)
-            :base(unitOfWork,logger)
+            : base(unitOfWork, logger)
         {
-
         }
     }
 
