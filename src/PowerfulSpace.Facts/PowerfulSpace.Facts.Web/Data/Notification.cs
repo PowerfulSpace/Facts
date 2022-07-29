@@ -15,9 +15,9 @@ namespace PowerfulSpace.Facts.Web.Data
 
         public bool IsCompleted { get; set; }
 
-        public string AddAdressFrom { get; set; }
+        public string AddressFrom { get; set; }
 
-        public string AddAdressTo { get; set; }
+        public string AddressTo { get; set; }
 
 
 
@@ -25,8 +25,8 @@ namespace PowerfulSpace.Facts.Web.Data
         {
             Subject = subject;
             Content = content;
-            AddAdressFrom = addAdressFrom;
-            AddAdressTo = addAdressTo;
+            AddressFrom = addAdressFrom;
+            AddressTo = addAdressTo;
         }
 
        

@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace PowerfulSpace.Facts.Web.Controllers.Facts.Query
+namespace PowerfulSpace.Facts.Web.Controllers.Facts.Queries
 {
     public class FactGetByIdRequest : OperationResultRequestBase<FactViewModel>
     {

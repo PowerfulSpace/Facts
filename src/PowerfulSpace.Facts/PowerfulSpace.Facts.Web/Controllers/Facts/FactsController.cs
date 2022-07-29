@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PowerfulSpace.Facts.Web.Controllers.Facts.Query;
+using PowerfulSpace.Facts.Web.Controllers.Facts.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

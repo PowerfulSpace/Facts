@@ -23,12 +23,12 @@ namespace PowerfulSpace.Facts.Web.Data.Configurations
 
             builder.Property(x => x.Subject).IsRequired().HasMaxLength(256);
             builder.Property(x => x.Content).IsRequired().HasMaxLength(3000);
-            builder.Property(x => x.AddAdressFrom).IsRequired().HasMaxLength(128);
-            builder.Property(x => x.AddAdressTo).IsRequired().HasMaxLength(128);
+            builder.Property(x => x.AddressFrom).IsRequired().HasMaxLength(128);
+            builder.Property(x => x.AddressTo).IsRequired().HasMaxLength(128);
             builder.Property(x => x.IsCompleted);
 
-            builder.HasIndex(x => x.AddAdressFrom);
-            builder.HasIndex(x => x.AddAdressTo);
+            builder.HasIndex(x => x.AddressFrom);
+            builder.HasIndex(x => x.AddressTo);
             builder.HasIndex(x => x.Content);
             builder.HasIndex(x => x.Subject);
 

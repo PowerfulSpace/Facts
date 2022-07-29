@@ -13,7 +13,7 @@ using System.Linq;
 using Calabonga.PredicatesBuilder;
 using System.Linq.Expressions;
 
-namespace PowerfulSpace.Facts.Web.Controllers.Facts.Query
+namespace PowerfulSpace.Facts.Web.Controllers.Facts.Queries
 {
     public class FactGetPagedRequest : OperationResultRequestBase<IPagedList<FactViewModel>>
     {
