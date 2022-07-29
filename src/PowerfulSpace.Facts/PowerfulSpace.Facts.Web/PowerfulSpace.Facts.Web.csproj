@@ -32,4 +32,8 @@
     <PackageReference Include="System.Drawing.Common" Version="5.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Powerful.Facts.RazorLibrary\Powerful.Facts.RazorLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
