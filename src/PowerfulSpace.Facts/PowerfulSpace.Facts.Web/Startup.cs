@@ -70,6 +70,10 @@ namespace PowerfulSpace.Facts.Web
                 config.LowercaseUrls = true;
             });
 
+
+            services.AddServerSideBlazor();
+
+
             services.AddControllersWithViews();
         }
 

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerfulSpace.Facts.Web", "PowerfulSpace.Facts.Web\PowerfulSpace.Facts.Web.csproj", "{7927624E-9F8A-4DE8-8055-D58467F7BFF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerfulSpace.Facts.Web.Tests", "PowerfulSpace.Facts.Web.Tests\PowerfulSpace.Facts.Web.Tests.csproj", "{8FEFDD12-6B72-4987-8781-30D541B6541F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerfulSpace.Facts.Web.Tests", "PowerfulSpace.Facts.Web.Tests\PowerfulSpace.Facts.Web.Tests.csproj", "{8FEFDD12-6B72-4987-8781-30D541B6541F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Powerful.Facts.RazorLibrary", "Powerful.Facts.RazorLibrary\Powerful.Facts.RazorLibrary.csproj", "{DF96B350-EB02-4131-B4DC-C0C19091D285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8FEFDD12-6B72-4987-8781-30D541B6541F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FEFDD12-6B72-4987-8781-30D541B6541F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FEFDD12-6B72-4987-8781-30D541B6541F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF96B350-EB02-4131-B4DC-C0C19091D285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF96B350-EB02-4131-B4DC-C0C19091D285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF96B350-EB02-4131-B4DC-C0C19091D285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF96B350-EB02-4131-B4DC-C0C19091D285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
