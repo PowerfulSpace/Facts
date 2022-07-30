@@ -6,7 +6,10 @@
 
 @if (ViewData["HideLink"] is not null)
 {
-    <component type="typeof(FactLinkComponent)" render-mode="ServerPrerendered" />
+    <component 
+               type="typeof(FactLinkComponent)" 
+               render-mode="ServerPrerendered"
+               param-LinkValue="@Url.ActionLink("Show","Facts", new { id = Model})" />
 }
 else
 {

@@ -37,11 +37,22 @@ using Microsoft.JSInterop;
 #line 5 "D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\FactLinkComponent.razor"
         
 
+    [Parameter]public string LinkValue { get; set; }
     [Inject]IJSRuntime jSRuntime { get; set; }
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+
+
+    //protected override async Task OnAfterRenderAsync(bool firstRender)
+    //{
+    //    var interop = new RazorInterop(jSRuntime);
+    //    await interop.ShowToast("asdsadas", "dsdasdasdasdas");
+    //}
+
+
+    protected async Task CopyToClipboard(string value)
     {
         var interop = new RazorInterop(jSRuntime);
-        await interop.ShowToast("asdsadas", "dsdasdasdasdas");
+        await interop.CopyToClipboard(value);
+        await interop.ShowToast(value, "Скопировано", "success");
     }
 
 #line default

@@ -29,3 +29,9 @@ export function showToast(message, title, type) {
     window.toastr[type](message, title);
 
 }
+
+
+export function copyToClipboard(value) {
+    navigator.clipboard.writeText(value);
+    return;
+}
