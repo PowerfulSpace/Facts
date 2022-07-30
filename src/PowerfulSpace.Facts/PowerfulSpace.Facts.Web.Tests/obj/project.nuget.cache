@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qijpBfcByvVaapzf5JtxizGPnI0sv4MVlnm19vngjUVypnn30mf02a5kGBE5t4WNcvnsyn7Q67Ka8ZdDqmyX5g==",
+  "dgSpecHash": "DlIa9SopcievH7O8kD6oOpEk47wF1xigJH3p1D92yHLiEEKeUw8BskIl/8GcrsqgCTUjSKl8Wpt3UMaY+Nngug==",
   "success": true,
   "projectFilePath": "D:\\Git_Repositories\\Projects\\Facts\\src\\PowerfulSpace.Facts\\PowerfulSpace.Facts.Web.Tests\\PowerfulSpace.Facts.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -107,6 +107,7 @@
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.4\\microsoft.net.test.sdk.16.9.4.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\Razor\\.nuget\\packages\\microsoft.syndicationfeed.readerwriter\\1.0.2\\microsoft.syndicationfeed.readerwriter.1.0.2.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.9.4\\microsoft.testplatform.objectmodel.16.9.4.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.testplatform.testhost\\16.9.4\\microsoft.testplatform.testhost.16.9.4.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\5.0.2\\microsoft.visualstudio.web.codegeneration.5.0.2.nupkg.sha512",

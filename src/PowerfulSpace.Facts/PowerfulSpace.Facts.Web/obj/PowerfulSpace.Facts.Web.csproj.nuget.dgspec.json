@@ -180,6 +180,10 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.SyndicationFeed.ReaderWriter": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"

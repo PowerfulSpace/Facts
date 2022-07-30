@@ -36,7 +36,11 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
 
         }
 
-        public IActionResult Rss() => View();
+        public async Task<IActionResult> Rss()
+        {
+            var rss = await _mediator.Send(new FactGetRssRequest(), HttpContext.RequestAborted);
+            return Content(rss);
+        }
 
         public async Task<IActionResult> Random()
         {

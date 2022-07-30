@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PowerfulSpace.Facts.Web.Data;
 using PowerfulSpace.Facts.Web.Infrastructure.Mappers.Base;
+using PowerfulSpace.Facts.Web.Infrastructure.Services;
 using PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,7 @@ namespace PowerfulSpace.Facts.Web
             services.AddCommandAndQueries(typeof(Startup).Assembly);
 
             services.AddTransient<IPagerTagHelperService, PagerTagHelperService>();
+            services.AddTransient<IFactService, FactService>();
 
 
             services.AddRouting(config =>
