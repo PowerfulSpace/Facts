@@ -103,7 +103,7 @@ namespace PowerfulSpace.Facts.Web.Controllers
         }
 
 
-        public IActionResult Rss() => View();
+        
 
         public IActionResult FeedbackSent()
         {
