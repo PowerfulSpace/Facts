@@ -56,8 +56,6 @@ namespace PowerfulSpace.Facts.Web.Controllers
 
         public IActionResult Random() => View();
 
-        public IActionResult Cloud() => View();
-
 
         public IActionResult FeedBack()
         {

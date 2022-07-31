@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using PowerfulSpace.Facts.Web.Controllers.Facts.Queries;
+using PowerfulSpace.Facts.Web.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,11 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
     {
 
         private readonly IMediator _mediator;
+        private readonly ITagService _tagService;
 
-        public FactsController(IMediator mediator)
+        public FactsController(ITagService tagService, IMediator mediator)
         {
+            _tagService = tagService;
             _mediator = mediator;
         }
 
@@ -48,6 +51,10 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
             return View(fact);
         }
 
+        public IActionResult Cloud()
+        {
+            return View();
+        }
 
         public async Task<IActionResult> Show(Guid id, string? returnUrl = null)
         {

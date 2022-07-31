@@ -14,6 +14,7 @@ using PowerfulSpace.Facts.Web.Data;
 using PowerfulSpace.Facts.Web.Infrastructure.Mappers.Base;
 using PowerfulSpace.Facts.Web.Infrastructure.Services;
 using PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper;
+using PowerfulSpace.Facts.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,7 @@ namespace PowerfulSpace.Facts.Web
 
             services.AddTransient<IPagerTagHelperService, PagerTagHelperService>();
             services.AddTransient<IFactService, FactService>();
+            services.AddTransient<ITagService, TagService>();
 
 
             services.AddRouting(config =>
@@ -75,6 +77,7 @@ namespace PowerfulSpace.Facts.Web
 
             services.AddServerSideBlazor();
 
+            services.AddResponseCaching();
 
             services.AddControllersWithViews();
         }
@@ -101,6 +104,8 @@ namespace PowerfulSpace.Facts.Web
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseResponseCaching();
 
             app.UseEndpoints(endpoints =>
             {
