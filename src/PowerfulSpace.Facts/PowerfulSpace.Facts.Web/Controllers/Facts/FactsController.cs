@@ -1,7 +1,10 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PowerfulSpace.Facts.Web.Controllers.Facts.Queries;
+using PowerfulSpace.Facts.Web.Infrastructure;
 using PowerfulSpace.Facts.Web.Infrastructure.Services;
+using PowerfulSpace.Facts.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +16,13 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
     {
 
         private readonly IMediator _mediator;
-        private readonly ITagService _tagService;
 
-        public FactsController(ITagService tagService, IMediator mediator)
+
+        public FactsController(IMediator mediator)
         {
-            _tagService = tagService;
             _mediator = mediator;
         }
+
 
         public async Task<IActionResult> Index(int? pageIndex, string tag, string search)
         {
@@ -38,6 +41,31 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
             return View(operationResult);
 
         }
+
+        [Authorize(Roles = AppData.AdministratorRoleName)]
+        public async Task<IActionResult> Edit(Guid id, string returnUrl)
+        {
+            var operationResult = await _mediator.Send(new FactGetByIdForEditRequest(id, returnUrl));
+            if (operationResult.Ok)
+            {
+                return View(operationResult.Result);
+            }
+
+            return RedirectToAction("Error", "Site", new { code = 404 });
+        }
+
+        [HttpPost]
+        [Authorize(Roles = AppData.AdministratorRoleName)]
+        public async Task<IActionResult> Edit(FactEditViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            return Redirect(model.ReturnUrl);
+        }
+
 
         public async Task<IActionResult> Rss()
         {
