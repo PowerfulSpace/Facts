@@ -494,3 +494,5 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Shared\Components\Cloud\Default.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\Edit.cshtml.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\obj\Debug\net5.0\Razor\Views\Facts\_FactActions.cshtml.g.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web\bin\Debug\net5.0\Powerful.Facts.Contracts.pdb

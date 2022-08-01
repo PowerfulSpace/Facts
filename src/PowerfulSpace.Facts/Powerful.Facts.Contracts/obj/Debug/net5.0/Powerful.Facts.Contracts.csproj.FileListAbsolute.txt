@@ -1,0 +1,12 @@
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\bin\Debug\net5.0\Powerful.Facts.Contracts.deps.json
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\bin\Debug\net5.0\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\bin\Debug\net5.0\ref\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\bin\Debug\net5.0\Powerful.Facts.Contracts.pdb
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.csproj.AssemblyReference.cache
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.AssemblyInfoInputs.cache
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.AssemblyInfo.cs
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.csproj.CoreCompileInputs.cache
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\ref\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.Contracts\obj\Debug\net5.0\Powerful.Facts.Contracts.pdb

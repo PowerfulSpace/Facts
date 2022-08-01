@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Powerful.Facts.Contracts\Powerful.Facts.Contracts.csproj" />
     <ProjectReference Include="..\Powerful.Facts.RazorLibrary\Powerful.Facts.RazorLibrary.csproj" />
   </ItemGroup>
 

@@ -141,6 +141,16 @@
         "runtime": {
           "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
         }
+      },
+      "Powerful.Facts.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Powerful.Facts.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Powerful.Facts.Contracts.dll": {}
+        }
       }
     }
   },
@@ -392,11 +402,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Powerful.Facts.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Powerful.Facts.Contracts/Powerful.Facts.Contracts.csproj",
+      "msbuildProject": "../Powerful.Facts.Contracts/Powerful.Facts.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.AspNetCore.Components.Web >= 5.0.11"
+      "Microsoft.AspNetCore.Components.Web >= 5.0.11",
+      "Powerful.Facts.Contracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -432,7 +448,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Git_Repositories\\Projects\\Facts\\src\\PowerfulSpace.Facts\\Powerful.Facts.Contracts\\Powerful.Facts.Contracts.csproj": {
+              "projectPath": "D:\\Git_Repositories\\Projects\\Facts\\src\\PowerfulSpace.Facts\\Powerful.Facts.Contracts\\Powerful.Facts.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

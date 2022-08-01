@@ -26,3 +26,6 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorL
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\obj\Debug\net5.0\RazorDeclaration\TagsEditorComponent.razor.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\obj\Debug\net5.0\Razor\TagsEditorComponent.razor.g.cs
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\obj\Debug\net5.0\Powerful.Facts.RazorLibrary.csproj.AssemblyReference.cache
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\bin\Debug\net5.0\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\bin\Debug\net5.0\Powerful.Facts.Contracts.pdb
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\Powerful.Facts.RazorLibrary\obj\Debug\net5.0\Powerful.Facts.RazorLibrary.csproj.CopyComplete

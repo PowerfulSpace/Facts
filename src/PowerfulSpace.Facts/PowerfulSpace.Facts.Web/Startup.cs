@@ -3,21 +3,15 @@ using Calabonga.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Powerful.Facts.Contracts;
 using PowerfulSpace.Facts.Web.Data;
-using PowerfulSpace.Facts.Web.Infrastructure.Mappers.Base;
 using PowerfulSpace.Facts.Web.Infrastructure.Services;
 using PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper;
-using PowerfulSpace.Facts.Web.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web
@@ -66,6 +60,7 @@ namespace PowerfulSpace.Facts.Web
             services.AddTransient<IPagerTagHelperService, PagerTagHelperService>();
             services.AddTransient<IFactService, FactService>();
             services.AddTransient<ITagService, TagService>();
+            services.AddTransient<ITagSearchService, TagSearchService>();
 
 
             services.AddRouting(config =>

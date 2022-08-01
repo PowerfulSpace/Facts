@@ -34,6 +34,7 @@
       "Powerful.Facts.RazorLibrary/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "5.0.11",
+          "Powerful.Facts.Contracts": "1.0.0",
           "Microsoft.CSharp": "5.0.0.0",
           "Microsoft.VisualBasic.Core": "10.0.6.0",
           "Microsoft.VisualBasic": "10.0.0.0",
@@ -351,6 +352,14 @@
         },
         "compile": {
           "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
+        }
+      },
+      "Powerful.Facts.Contracts/1.0.0": {
+        "runtime": {
+          "Powerful.Facts.Contracts.dll": {}
+        },
+        "compile": {
+          "Powerful.Facts.Contracts.dll": {}
         }
       },
       "Microsoft.CSharp/5.0.0.0": {
@@ -1363,6 +1372,11 @@
       "sha512": "sha512-qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
       "path": "system.io.pipelines/5.0.1",
       "hashPath": "system.io.pipelines.5.0.1.nupkg.sha512"
+    },
+    "Powerful.Facts.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.CSharp/5.0.0.0": {
       "type": "referenceassembly",
