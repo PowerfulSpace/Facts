@@ -1,11 +1,8 @@
 ﻿using Calabonga.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
 using Powerful.Facts.Contracts;
 using PowerfulSpace.Facts.Web.Data;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Infrastructure.Services
 {
@@ -18,14 +15,14 @@ namespace PowerfulSpace.Facts.Web.Infrastructure.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<List<string>> SearchTags(string tern)
+        public List<string> SearchTags(string tern)
         {
-            var items =  await _unitOfWork.GetRepository<Tag>()
+            var items = _unitOfWork.GetRepository<Tag>()
                 .GetAll(
                     s => s.Name,
                     x => x.Name.ToLower().StartsWith(tern.ToLower()),
                     true)
-                .ToListAsync();
+                .ToList();
 
             return items;
         }

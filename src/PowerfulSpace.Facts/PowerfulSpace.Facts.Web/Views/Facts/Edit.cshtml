@@ -35,7 +35,7 @@
                 </div>
                 @if (Model.Tags != null)
                 {
-                    <label asp-for="TotalTags"></label>
+                    @*<label asp-for="TotalTags"></label>*@
                     <component type="typeof(TagsEditorComponent)" render-mode="ServerPrerendered"
                                param-Tags="@Model.Tags" />
                     <br />

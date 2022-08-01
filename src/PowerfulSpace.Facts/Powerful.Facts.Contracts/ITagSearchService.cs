@@ -8,6 +8,6 @@ namespace Powerful.Facts.Contracts
 {
     public interface ITagSearchService
     {
-        Task<List<string>> SearchTags(string tern);
+        List<string> SearchTags(string tern);
     }
 }

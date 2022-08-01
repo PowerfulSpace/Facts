@@ -37,7 +37,7 @@
                    autocomplete="off"
                    @bind="TagName"
                    @oninput="SearchTags"/>
-            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="() => AddTag(TagName)">+</button>
         </div>
         <div class="mb-3">
             @if (Founded != null && Founded.Any())
@@ -45,7 +45,7 @@
                 foreach (var tag in Founded)
                 {
                     <div class="badge rounded-pill bg-info">
-                        <span style="cursor: pointer">
+                        <span style="cursor: pointer" @onclick="() => AddTag(tag)">
                             @tag
                         </span>
                     </div>

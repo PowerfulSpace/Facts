@@ -41,7 +41,7 @@ namespace Powerful.Facts.RazorLibrary
         }
 
 
-        protected async Task SearchTags(ChangeEventArgs args)
+        protected void SearchTags(ChangeEventArgs args)
         {
             if(args?.Value is null)
             {
@@ -55,8 +55,32 @@ namespace Powerful.Facts.RazorLibrary
                 return;
             }
 
-            Founded = await TagSearchService.SearchTags(args.Value.ToString());
+            Founded = TagSearchService.SearchTags(args.Value.ToString());
 
+        }
+
+
+
+        protected async Task AddTag(string value)
+        {
+
+            var tag = value?.ToLower().Trim();
+
+            if (string.IsNullOrEmpty(tag))
+            {
+                return;
+            }
+
+            Tags ??= new List<string>();
+
+            if(!Tags.Exists( x => x.Equals(tag, StringComparison.InvariantCulture)))
+            {
+                Tags.Add(tag);
+                await new RazorInterop(jsRuntime).SetTagsTotal(Tags.Count);
+            }
+
+            TagName = string.Empty;
+            Founded = null;
         }
 
     }
