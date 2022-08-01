@@ -25,6 +25,12 @@ namespace Powerful.Facts.RazorLibrary
 
 
 
+        public async ValueTask SetTagsTotal(int value)
+        {
+            var module = await _moduleTask.Value;
+            await module.InvokeVoidAsync("setTagsTotal", "TotalTags",value);
+        }
+
 
         public async ValueTask<string> ShowToast(string message, string title, string type = "info")
         {
