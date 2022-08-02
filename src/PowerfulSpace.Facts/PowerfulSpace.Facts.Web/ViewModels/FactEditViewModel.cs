@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerfulSpace.Facts.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.ViewModels
 {
-    public class FactEditViewModel
+    public class FactEditViewModel : IHaveTags
     {
         public Guid Id { get; set; }
 
@@ -17,7 +18,7 @@ namespace PowerfulSpace.Facts.Web.ViewModels
         public string ReturnUrl { get; set; } = null!;
 
         [Display(Name = "Метки для факта")]
-        public List<string> Tags { get; set; }
+        public List<string>? Tags { get; set; }
 
         [Range(1, 8, ErrorMessage = "Требуется от 1 до 8 меток")]
         [Display(Name = "Метки для факта")]

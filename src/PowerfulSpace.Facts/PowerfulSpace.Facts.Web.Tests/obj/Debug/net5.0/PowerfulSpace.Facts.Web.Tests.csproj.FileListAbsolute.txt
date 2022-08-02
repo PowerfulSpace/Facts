@@ -532,3 +532,5 @@ D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.W
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Powerful.Facts.RazorLibrary.dll
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Powerful.Facts.RazorLibrary.pdb
 D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Microsoft.SyndicationFeed.ReaderWriter.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Powerful.Facts.Contracts.dll
+D:\Git_Repositories\Projects\Facts\src\PowerfulSpace.Facts\PowerfulSpace.Facts.Web.Tests\bin\Debug\net5.0\Powerful.Facts.Contracts.pdb

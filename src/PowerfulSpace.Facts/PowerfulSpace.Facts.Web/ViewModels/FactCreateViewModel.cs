@@ -1,14 +1,20 @@
-﻿using System;
+﻿using PowerfulSpace.Facts.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.ViewModels
 {
-    public class FactCreateViewModel
+    public class FactCreateViewModel : IHaveTags
     {
-        public string Content { get; set; } = null!;
+        [Display(Name = "Содержание факта")]
+        public string? Content { get; set; }
 
-        public IEnumerable<string> Tags { get; set; } = null!;
+        public List<string>? Tags { get; set; }
+
+        [Range(1, 8, ErrorMessage = "Требуется от 1 до 8 меток")]
+        public int TotalTags { get; set; }
     }
 }

@@ -51,6 +51,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
           "Microsoft.SyndicationFeed.ReaderWriter": "1.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "Powerful.Facts.Contracts": "1.0.0",
           "Powerful.Facts.RazorLibrary": "1.0.0",
           "Serilog.AspNetCore": "6.0.0-dev-00265",
           "System.Drawing.Common": "5.0.3",
@@ -3032,9 +3033,18 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Powerful.Facts.Contracts/1.0.0": {
+        "runtime": {
+          "Powerful.Facts.Contracts.dll": {}
+        },
+        "compile": {
+          "Powerful.Facts.Contracts.dll": {}
+        }
+      },
       "Powerful.Facts.RazorLibrary/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "5.0.11"
+          "Microsoft.AspNetCore.Components.Web": "5.0.11",
+          "Powerful.Facts.Contracts": "1.0.0"
         },
         "runtime": {
           "Powerful.Facts.RazorLibrary.dll": {}
@@ -6285,6 +6295,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Powerful.Facts.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Powerful.Facts.RazorLibrary/1.0.0": {
       "type": "project",

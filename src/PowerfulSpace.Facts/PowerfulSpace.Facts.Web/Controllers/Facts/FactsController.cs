@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PowerfulSpace.Facts.Web.Controllers.Facts.Command;
 using PowerfulSpace.Facts.Web.Controllers.Facts.Queries;
 using PowerfulSpace.Facts.Web.Infrastructure;
 using PowerfulSpace.Facts.Web.Infrastructure.Services;
@@ -42,6 +43,42 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
 
         }
 
+
+
+
+        [Authorize(Roles = AppData.AdministratorRoleName)]
+        public IActionResult Add()
+        {
+            var model = new FactCreateViewModel
+            {
+                Tags = new List<string>()
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = AppData.AdministratorRoleName)]
+        public async Task<IActionResult> Add(FactCreateViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var operationResult = await _mediator.Send(new FactAddRequest(model));
+                if (operationResult.Ok)
+                {
+                    return RedirectToAction("Index", "Facts");
+                }
+                ModelState.AddModelError("", operationResult.Exception.GetBaseException().Message);
+            }
+
+            return View(model);
+        }
+
+
+
+
+
+
+
         [Authorize(Roles = AppData.AdministratorRoleName)]
         public async Task<IActionResult> Edit(Guid id, string returnUrl)
         {
@@ -51,20 +88,32 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
                 return View(operationResult.Result);
             }
 
-            return RedirectToAction("Error", "Site", new { code = 404 });
+            return RedirectToAction("Error", "Site", new
+            {
+                code = 404
+            });
         }
 
         [HttpPost]
         [Authorize(Roles = AppData.AdministratorRoleName)]
         public async Task<IActionResult> Edit(FactEditViewModel model)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View(model);
+                var operationResult = await _mediator.Send(new FactUpdateRequest(model));
+                if (operationResult.Ok)
+                {
+                    return string.IsNullOrEmpty(model.ReturnUrl)
+                        ? RedirectToAction("Index", "Facts")
+                        : Redirect(model.ReturnUrl);
+                }
             }
 
-            return Redirect(model.ReturnUrl);
+            return View(model);
         }
+
+
+
 
 
         public async Task<IActionResult> Rss()
