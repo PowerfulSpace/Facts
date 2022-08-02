@@ -15,7 +15,6 @@ namespace PowerfulSpace.Facts.Web.Infrastructure.Mappers
             CreateMap<Tag, TagUpdateViewModel>();
 
             CreateMap<TagUpdateViewModel, Tag>()
-                .ForMember(x => x.Id, o => o.Ignore())
                 .ForMember(x => x.Facts, o => o.Ignore());
         }
 

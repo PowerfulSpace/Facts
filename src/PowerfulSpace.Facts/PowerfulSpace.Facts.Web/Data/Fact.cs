@@ -11,6 +11,6 @@ namespace PowerfulSpace.Facts.Web.Data
     {
         public string Content { get; set; } = null!;
 
-        public ICollection<Tag>? Tags { get; set; } = null!;
+        public ICollection<Tag>? Tags { get; set; }
     }
 }

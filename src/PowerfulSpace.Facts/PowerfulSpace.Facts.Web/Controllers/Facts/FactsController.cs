@@ -15,36 +15,32 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
 {
     public class FactsController : Controller
     {
-
         private readonly IMediator _mediator;
 
+        public FactsController(IMediator mediator) => _mediator = mediator;
 
-        public FactsController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
-
-
-        public async Task<IActionResult> Index(int? pageIndex, string tag, string search)
+        public async Task<IActionResult> Index(int? pageIndex,
+            string tag,
+            string search)
         {
             ViewData["search"] = search;
             ViewData["tag"] = tag;
-
             var index = pageIndex ?? 1;
-
-            var operationResult = await _mediator.Send(new FactGetPagedRequest(index, tag, search), HttpContext.RequestAborted);
-           
-            if(operationResult.Ok && operationResult.Result.TotalPages > index)
+            var operation = await _mediator.Send(new FactGetPagedRequest(index, tag, search), HttpContext.RequestAborted);
+            if (operation.Ok && operation.Result.TotalPages < index && operation.Metadata is not null)
             {
-                return RedirectToAction(nameof(Index), new { tag, search, pageIndex = 1 });
+                return RedirectToAction(nameof(Index), new
+                {
+                    tag,
+                    search,
+                    pageIndex = 1
+                });
             }
 
-            return View(operationResult);
-
+            return View(operation);
         }
 
-
-
+        #region Add
 
         [Authorize(Roles = AppData.AdministratorRoleName)]
         public IActionResult Add()
@@ -73,11 +69,9 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
             return View(model);
         }
 
+        #endregion
 
-
-
-
-
+        #region Edit
 
         [Authorize(Roles = AppData.AdministratorRoleName)]
         public async Task<IActionResult> Edit(Guid id, string returnUrl)
@@ -112,33 +106,21 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts
             return View(model);
         }
 
+        #endregion
 
+        public IActionResult Cloud() => View();
 
+        public async Task<IActionResult> Rss() =>
+            Content(await _mediator.Send(new FactGetRssRequest(), HttpContext.RequestAborted));
 
+        public async Task<IActionResult> Random() =>
+            View(await _mediator.Send(new FactGetRandomRequest(), HttpContext.RequestAborted));
 
-        public async Task<IActionResult> Rss()
-        {
-            var rss = await _mediator.Send(new FactGetRssRequest(), HttpContext.RequestAborted);
-            return Content(rss);
-        }
-
-        public async Task<IActionResult> Random()
-        {
-            var fact = await _mediator.Send(new FactGetRandomRequest(), HttpContext.RequestAborted);
-            return View(fact);
-        }
-
-        public IActionResult Cloud()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> Show(Guid id, string? returnUrl = null)
+        public async Task<IActionResult> Show(Guid id,
+            string? returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-
-            var fact = await _mediator.Send(new FactGetByIdRequest(id), HttpContext.RequestAborted);
-            return View(fact);
+            return View(await _mediator.Send(new FactGetByIdRequest(id), HttpContext.RequestAborted));
         }
     }
 }

@@ -10,6 +10,6 @@ namespace PowerfulSpace.Facts.Web.Data
     {
         public string Name { get; set; } = null!;
 
-        public ICollection<Fact> Facts { get; set; } = null!;
+        public ICollection<Fact>? Facts { get; set; }
     }
 }

@@ -18,15 +18,12 @@ namespace PowerfulSpace.Facts.Web.Controllers.Facts.Queries
     public record FactGetByIdForEditRequest(Guid Id, string ReturnUrl = null!) : OperationResultRequestBase<FactEditViewModel>;
 
 
-
-
     public class FactGetByIdForEditRequestHandler : OperationResultRequestHandlerBase<FactGetByIdForEditRequest, FactEditViewModel>
     {
         private readonly IUnitOfWork _unitOfWork;
 
         public FactGetByIdForEditRequestHandler(IUnitOfWork unitOfWork)
             => _unitOfWork = unitOfWork;
-
 
         public override async Task<OperationResult<FactEditViewModel>> Handle(FactGetByIdForEditRequest request, CancellationToken cancellationToken)
         {

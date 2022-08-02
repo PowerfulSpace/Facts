@@ -9,19 +9,14 @@ using System.Threading.Tasks;
 
 namespace PowerfulSpace.Facts.Web.Data.Base
 {
+
     public abstract class DbContextBase : IdentityDbContext
     {
-
         public SaveChangesResult SaveChangesResult { get; set; }
 
-
         protected DbContextBase(DbContextOptions options)
-           : base(options)
-        {
-            SaveChangesResult = new SaveChangesResult();
-        }
-
-
+            : base(options)
+            => SaveChangesResult = new SaveChangesResult();
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -30,11 +25,13 @@ namespace PowerfulSpace.Facts.Web.Data.Base
             base.OnModelCreating(builder);
         }
 
+
         public override int SaveChanges()
         {
             DbSaveChanges();
             return base.SaveChanges();
         }
+
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
         {
@@ -42,50 +39,56 @@ namespace PowerfulSpace.Facts.Web.Data.Base
             return base.SaveChanges(acceptAllChangesOnSuccess);
         }
 
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {
             DbSaveChanges();
             return base.SaveChangesAsync(cancellationToken);
         }
 
-        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = new())
         {
             DbSaveChanges();
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
-
-
         private void DbSaveChanges()
         {
-            const string defaultUser = "System";
+            // Added
+
+            const string defaultUser = "dev@calabonga.net";
             var defaultDate = DateTime.UtcNow;
 
-            var addEntities = ChangeTracker.Entries().Where(x => x.State == EntityState.Added);
+            var addedEntities = ChangeTracker.Entries().Where(x => x.State == EntityState.Added);
 
-
-            foreach (var entry in addEntities)
+            foreach (var entry in addedEntities)
             {
+                if (entry.Entity is not IAuditable)
+                {
+                    return;
+                }
 
-                if (entry.Entity is not IAuditable) { return; }
-
-                var createdAt = entry.Property(nameof(IAuditable.CreatedAt)).CurrentValue;
                 var createdBy = entry.Property(nameof(IAuditable.CreatedBy)).CurrentValue;
-
-                var updatedAt = entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue;
                 var updatedBy = entry.Property(nameof(IAuditable.UpdatedBy)).CurrentValue;
-
+                var createdAt = entry.Property(nameof(IAuditable.CreatedAt)).CurrentValue;
+                var updatedAt = entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue;
 
 
                 if (string.IsNullOrEmpty(createdBy?.ToString()))
+                {
                     entry.Property(nameof(IAuditable.CreatedBy)).CurrentValue = defaultUser;
+                }
 
                 if (string.IsNullOrEmpty(updatedBy?.ToString()))
+                {
                     entry.Property(nameof(IAuditable.UpdatedBy)).CurrentValue = defaultUser;
-
+                }
 
                 if (DateTime.Parse(createdAt?.ToString()!).Year < 1970)
+                {
                     entry.Property(nameof(IAuditable.CreatedAt)).CurrentValue = defaultDate;
+                }
 
                 if (updatedAt != null && DateTime.Parse(updatedAt.ToString()!).Year < 1970)
                 {
@@ -95,16 +98,17 @@ namespace PowerfulSpace.Facts.Web.Data.Base
                 {
                     entry.Property(nameof(IAuditable.UpdatedAt)).CurrentValue = defaultDate;
                 }
-                    
+
                 SaveChangesResult.AddMessage("Some entities were created");
             }
 
+            // Modified
 
             var modifiedEntities = ChangeTracker.Entries().Where(x => x.State == EntityState.Modified);
 
             foreach (var entry in modifiedEntities)
             {
-                if(entry.Entity is IAuditable)
+                if (entry.Entity is IAuditable)
                 {
                     var userName = entry.Property(nameof(IAuditable.UpdatedBy)).CurrentValue == null
                         ? defaultUser
@@ -116,8 +120,6 @@ namespace PowerfulSpace.Facts.Web.Data.Base
 
                 SaveChangesResult.AddMessage("Some entities were modified");
             }
-
-
         }
     }
 
