@@ -285,6 +285,10 @@
               "target": "Package",
               "version": "[3.0.1, )"
             },
+            "Calabonga.Microservices.BackgroundWorkers": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
             "Calabonga.Microservices.Core": {
               "target": "Package",
               "version": "[4.0.0, )"

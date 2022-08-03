@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "avOe8UdiH+2y250PPMZ/PZy4EdwPSC0yf7g44++uTL5t93uqQ++Mp+i2ig92WMLv/inmp3+wlTa2UYKY3nQGBQ==",
+  "dgSpecHash": "6sWk+uTfHurvGFU1s4fBdjwSx/g1AhrMePLSAPP0OSj3sJCPdwFwPPFHAU89X63rOAyivPc1W604UaiEKZrxdw==",
   "success": true,
   "projectFilePath": "D:\\Git_Repositories\\Projects\\Facts\\src\\PowerfulSpace.Facts\\PowerfulSpace.Facts.Web.Tests\\PowerfulSpace.Facts.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Razor\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\calabonga.aspnetcore.controllers\\3.0.1\\calabonga.aspnetcore.controllers.3.0.1.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\calabonga.entityframeworkcore.entities.base\\3.0.1\\calabonga.entityframeworkcore.entities.base.3.0.1.nupkg.sha512",
+    "C:\\Users\\Razor\\.nuget\\packages\\calabonga.microservices.backgroundworkers\\1.0.5\\calabonga.microservices.backgroundworkers.1.0.5.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\calabonga.microservices.core\\4.0.0\\calabonga.microservices.core.4.0.0.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\calabonga.predicatesbuilder\\2.0.0\\calabonga.predicatesbuilder.2.0.0.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\calabonga.unitofwork\\2.1.0\\calabonga.unitofwork.2.1.0.nupkg.sha512",
@@ -121,6 +122,7 @@
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Razor\\.nuget\\packages\\ncrontab\\3.3.1\\ncrontab.3.3.1.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Razor\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",

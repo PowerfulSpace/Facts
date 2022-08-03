@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Powerful.Facts.Contracts;
 using PowerfulSpace.Facts.Web.Data;
+using PowerfulSpace.Facts.Web.Infrastructure.HostedServices;
+using PowerfulSpace.Facts.Web.Infrastructure.Providers;
 using PowerfulSpace.Facts.Web.Infrastructure.Services;
 using PowerfulSpace.Facts.Web.Infrastructure.TagHelpers.PagedListTagHelper;
 using System.Threading.Tasks;
@@ -57,6 +59,8 @@ namespace PowerfulSpace.Facts.Web
             //Подключение медиатра
             services.AddCommandAndQueries(typeof(Startup).Assembly);
 
+            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<INotificationProvider, NotificationProvider>();
             services.AddTransient<IPagerTagHelperService, PagerTagHelperService>();
             services.AddTransient<IFactService, FactService>();
             services.AddTransient<ITagService, TagService>();
@@ -73,6 +77,10 @@ namespace PowerfulSpace.Facts.Web
             services.AddServerSideBlazor();
 
             services.AddResponseCaching();
+
+            services.AddHostedService<NotificationHostedService>();
+
+
 
             services.AddControllersWithViews();
         }

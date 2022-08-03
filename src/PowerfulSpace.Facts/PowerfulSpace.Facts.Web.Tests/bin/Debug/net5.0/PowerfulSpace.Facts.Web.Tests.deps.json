@@ -369,6 +369,22 @@
           "lib/net5.0/Calabonga.EntityFrameworkCore.Entities.Base.dll": {}
         }
       },
+      "Calabonga.Microservices.BackgroundWorkers/1.0.5": {
+        "dependencies": {
+          "Calabonga.Microservices.Core": "4.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "3.1.8",
+          "NCrontab": "3.3.1"
+        },
+        "runtime": {
+          "lib/net5.0/Calabonga.Microservices.BackgroundWorkers.dll": {
+            "assemblyVersion": "1.0.5.0",
+            "fileVersion": "1.0.5.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Calabonga.Microservices.BackgroundWorkers.dll": {}
+        }
+      },
       "Calabonga.Microservices.Core/4.0.0": {
         "runtime": {
           "lib/net5.0/Calabonga.Microservices.Core.dll": {
@@ -2014,6 +2030,17 @@
           "Microsoft.NETCore.Platforms": "5.0.0"
         }
       },
+      "NCrontab/3.3.1": {
+        "runtime": {
+          "lib/netstandard2.0/NCrontab.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NCrontab.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -3389,6 +3416,7 @@
           "BuildBundlerMinifier": "3.2.449",
           "Calabonga.AspNetCore.Controllers": "3.0.1",
           "Calabonga.EntityFrameworkCore.Entities.Base": "3.0.1",
+          "Calabonga.Microservices.BackgroundWorkers": "1.0.5",
           "Calabonga.Microservices.Core": "4.0.0",
           "Calabonga.PredicatesBuilder": "2.0.0",
           "Calabonga.UnitOfWork": "2.1.0",
@@ -5046,6 +5074,13 @@
       "path": "calabonga.entityframeworkcore.entities.base/3.0.1",
       "hashPath": "calabonga.entityframeworkcore.entities.base.3.0.1.nupkg.sha512"
     },
+    "Calabonga.Microservices.BackgroundWorkers/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-paKOilAaSw0HZx7W7MlSM9G1wmGFATsOluNj5oJ/LDbtetARoe2DRk+vU22Jwf9jp0f9fXPSBlvGJLinxf0AqA==",
+      "path": "calabonga.microservices.backgroundworkers/1.0.5",
+      "hashPath": "calabonga.microservices.backgroundworkers.1.0.5.nupkg.sha512"
+    },
     "Calabonga.Microservices.Core/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -5829,6 +5864,13 @@
       "sha512": "sha512-Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
       "path": "microsoft.win32.systemevents/5.0.0",
       "hashPath": "microsoft.win32.systemevents.5.0.0.nupkg.sha512"
+    },
+    "NCrontab/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G3tzcIIgsiyZyVbHNPyn5+adaM9UjeVNgjrRsvXU7wo2sMhpvpQrir29dcjIND53H/fuTdgg9nI3SfFFg7barA==",
+      "path": "ncrontab/3.3.1",
+      "hashPath": "ncrontab.3.3.1.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

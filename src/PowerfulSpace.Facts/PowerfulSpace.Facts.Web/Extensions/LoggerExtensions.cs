@@ -8,12 +8,24 @@ namespace PowerfulSpace.Facts.Web.Extensions
     {
 
         public static readonly EventId DatabaseSavingErrorId = new EventId(70040001, "DatabaseSavingError");
-        public static readonly EventId NotificationAddedId = new EventId(70040001, "NotificationAdded");
+        public static readonly EventId NotificationAddedId = new EventId(70040002, "NotificationAdded");
+        public static readonly EventId NotificationProcessedId = new EventId(70040003, "NotificationProcessed");
     }
 
 
     public static class LoggerExtensions
     {
+
+
+        public static void NotificationProcessed(this ILogger source, string message)
+        {
+            NotificationProcessedExecute(source, message, null);
+        }
+
+        private static readonly Action<ILogger, string, Exception?> NotificationProcessedExecute =
+            LoggerMessage.Define<string>(LogLevel.Information, EventIdentifiers.NotificationProcessedId, "Processing for notification started: {message}");
+
+
 
 
         public static void NotificationAdded(this ILogger source, string subject)
